@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <style>
+      .justify-last-center {
+        text-align: justify;
+        text-align-last: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav
+      class="bg-[#f0242c] h-[100px] relative text-white grid grid-cols-5 shadow-xl mb-[50px]"
+    >
+      <!-- logo -->
+      <div
+        class="bg-white h-full flex items-center justify-center col-span-3 md:col-span-1"
+        style="clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%)"
+      >
+        <a href="/index.html">
+          <img
+            src="./assets/logo.png"
+            alt="logo GBP"
+            class="h-[60px] md:h-[75px] mr-5"
+          />
+        </a>
+      </div>
+      <div class="col-span-2 flex items-center justify-end md:hidden pr-4">
+        <button id="menu-toggle" class="focus:outline-none">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <ul
+        class="absolute hidden md:hidden w-full z-10 transform transition-transform duration-300 ease-in-out top-full"
+        id="menu"
+      >
+        <li class="flex py-[5px] bg-[#f0242c] justify-center items-center">
+          <a href="/product.html">PRODUK</a>
+        </li>
+        <li class="flex py-[5px] bg-[#f0242c] justify-center items-center">
+          <a href="/gudang.html">GUDANG</a>
+        </li>
+        <li class="flex py-[5px] bg-[#f0242c] justify-center items-center">
+          <a href="/catalog.html">KATALOG</a>
+        </li>
+        <li class="flex py-[5px] bg-[#f0242c] justify-center items-center">
+          <a href="/about.html">TENTANG KAMI</a>
+        </li>
+        <li class="flex py-[5px] bg-[#f0242c] justify-center items-center">
+          <a href="/article.html">ARTIKEL</a>
+        </li>
+        <li class="flex py-[5px] bg-[#f0242c] justify-center items-center">
+          <div class="flex items-center justify-center">
+            <input
+              type="text"
+              placeholder="SEARCH"
+              class="px-4 py-1 rounded-l-full text-black"
+            />
+            <button class="bg-white text-red-600 p-2 rounded-r-full">
+              <svg
+                class="w-4 h-4"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.707 14.293l5.657 5.657-1.414 1.414-5.657-5.657a8.001 8.001 0 111.414-1.414zm-5.707 1.707a6 6 0 100-12 6 6 0 000 12z"
+                />
+              </svg>
+            </button>
+          </div>
+        </li>
+      </ul>
+      <!-- list item -->
+      <ul class="hidden md:flex items-center justify-around col-span-3">
+        <li><a href="/product.html">PRODUK</a></li>
+        <li><a href="/gudang.html">GUDANG</a></li>
+        <li><a href="/catalog.html">KATALOG</a></li>
+        <li><a href="/about.html">TENTANG KAMI</a></li>
+        <li><a href="/article.html">ARTIKEL</a></li>
+      </ul>
+
+      <!-- search bar -->
+      <div class="col-span-1 hidden md:flex items-center justify-center">
+        <input
+          type="text"
+          placeholder="SEARCH"
+          class="px-4 py-1 rounded-l-full text-black"
+        />
+        <button class="bg-white text-red-600 p-2 rounded-r-full">
+          <svg
+            class="w-4 h-4"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M15.707 14.293l5.657 5.657-1.414 1.414-5.657-5.657a8.001 8.001 0 111.414-1.414zm-5.707 1.707a6 6 0 100-12 6 6 0 000 12z"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <!-- hero section -->
+    <section class="w-full relative h-[600px]">
+      <img
+        src="./assets/bg-slider-home-1.jpg"
+        alt="hero"
+        class="w-full h-full object-cover brightness-70"
+      />
+      <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center">
+        <div class="m-auto w-[700px]">
+          <h1 class="text-white text-5xl font-bold text-center">
+            Lebihi dari sekedar distributor
+          </h1>
+          <p class="text-white justify-last-center mt-5 w-[500px] m-auto">
+            Kami bertujuan untuk jadi lebih dari sekedar distributor
+            berkualitas, tetapi juga ingin membantu mempermudah setiap proses
+            Anda dalam mendapatkan bahan bangunan yang dibutuhkan termasuk jasa
+            konsultasi proyek dan inden produk.
+          </p>
+          <div class="flex items-center justify-center">
+            <button
+              class="py-2 px-5 mt-5 bg-[#f0242c] text-white font-semibold rounded-lg shadow-md focus:outline-none focus:ring"
+            >
+              Jelajahi Produk
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- section about -->
+    <section class="mt-5 p-5">
+      <h2 class="font-bold text-center mb-3">About Us</h2>
+      <h1 class="font-bold leading-5 text-center text-4xl">
+        <span class="text-[#751114]">One Stop</span>
+        <span class="underline decoration-[#751114]">Window & Door</span>
+        <span class="text-[#751114]">Solution</span>
+      </h1>
+
+      <div class="grid grid-cols-12 mt-10">
+        <p class="col-start-2 col-span-4 text-justify text-blue">
+          Global Buana Perkasa (GBP) merupakan perusahaan distributor profil
+          UPVC & aluminium beserta perlengkapannya seperti Mesin fabrikasi, Besi
+          Hollow dan berbagai Hardware Accessories. Berdiri sejak tahun 2011,
+          GBP telah berpengalaman dan berhasil menjadi distributor resmi dari
+          beragam merk terbaik dikelasnya untuk memenuhi kebutuhan proyek akan
+          pintu & jendela dengan standar kualitas tinggi. Lorem ipsum dolor sit
+          amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+          tincidunt ut laoreet dolore
+        </p>
+        <p class="col-start-8 col-span-4 text-justify">
+          magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+          nostrud exerci tation ullamcorper suscipit lobortis nisi ut aliquip ex
+          ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
+          vulputate velit esse molestie consequat, vel illum dolore eu feugiat
+          nulla facilisis at vero eros et accumsan et lusto odio dignissim qui
+          blandit praesent luptatum zzril delenit augue duis dolore te feugait
+          nulla facilisi.
+        </p>
+      </div>
+      <img
+        src="./assets/about-image.png"
+        alt="logo"
+        class="m-auto w-[1000px] mt-10"
+      />
+    </section>
+
+    <!-- product list section -->
+    <section class="flex justify-around w-[1000px] mx-auto">
+      <div>
+        <!-- image section -->
+        <div class="relative bg-gradient-to-t p-5 from-[#d8d4d4] to-white">
+          <img
+            src="./assets/hollow.png"
+            class="w-[150px] h-[250px] object-contain mx-auto"
+            alt="gambar"
+          />
+          <h1
+            class="absolute top-[20px] font-bold text-2xl left-0 right-0 text-center"
+          >
+            Besi Hollow
+          </h1>
+        </div>
+        <div class="grid grid-cols-5 bg-[#e8e4e4] mt-3">
+          <p class="col-span-4 text-center">Learn More</p>
+          <p
+            class="col-span-1 bg-[#f0242c] text-center text-white"
+            style="clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%)"
+          >
+            &rarr;
+          </p>
+        </div>
+      </div>
+      <div>
+        <!-- image section -->
+        <div class="relative bg-gradient-to-t p-5 from-[#d8d4d4] to-white">
+          <img
+            src="./assets/hollow.png"
+            class="w-[150px] h-[250px] object-contain mx-auto"
+            alt="gambar"
+          />
+          <h1
+            class="absolute top-[20px] font-bold text-2xl left-0 right-0 text-center"
+          >
+            Besi Hollow
+          </h1>
+        </div>
+        <div class="grid grid-cols-5 bg-[#e8e4e4] mt-3">
+          <p class="col-span-4 text-center">Learn More</p>
+          <p
+            class="col-span-1 bg-[#f0242c] text-center text-white"
+            style="clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%)"
+          >
+            &rarr;
+          </p>
+        </div>
+      </div>
+      <div>
+        <!-- image section -->
+        <div class="relative bg-gradient-to-t p-5 from-[#d8d4d4] to-white">
+          <img
+            src="./assets/hollow.png"
+            class="w-[150px] h-[250px] object-contain mx-auto"
+            alt="gambar"
+          />
+          <h1
+            class="absolute top-[20px] font-bold text-2xl left-0 right-0 text-center"
+          >
+            Besi Hollow
+          </h1>
+        </div>
+        <div class="grid grid-cols-5 bg-[#e8e4e4] mt-3">
+          <p class="col-span-4 text-center">Learn More</p>
+          <p
+            class="col-span-1 bg-[#f0242c] text-center text-white"
+            style="clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%)"
+          >
+            &rarr;
+          </p>
+        </div>
+      </div>
+      <div>
+        <!-- image section -->
+        <div class="relative bg-gradient-to-t p-5 from-[#d8d4d4] to-white">
+          <img
+            src="./assets/hollow.png"
+            class="w-[150px] h-[250px] object-contain mx-auto"
+            alt="gambar"
+          />
+          <h1
+            class="absolute top-[20px] font-bold text-2xl left-0 right-0 text-center"
+          >
+            Besi Hollow
+          </h1>
+        </div>
+        <div class="grid grid-cols-5 bg-[#e8e4e4] mt-3">
+          <p class="col-span-4 text-center">Learn More</p>
+          <p
+            class="col-span-1 bg-[#f0242c] text-center text-white"
+            style="clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%)"
+          >
+            &rarr;
+          </p>
+        </div>
+      </div>
+      <div>
+        <!-- image section -->
+        <div class="relative bg-gradient-to-t p-5 from-[#d8d4d4] to-white">
+          <img
+            src="./assets/hollow.png"
+            class="w-[150px] h-[250px] object-contain mx-auto"
+            alt="gambar"
+          />
+          <h1
+            class="absolute top-[20px] font-bold text-2xl left-0 right-0 text-center"
+          >
+            Besi Hollow
+          </h1>
+        </div>
+        <div class="grid grid-cols-5 bg-[#e8e4e4] mt-3">
+          <p class="col-span-4 text-center">Learn More</p>
+          <p
+            class="col-span-1 bg-[#f0242c] text-center text-white"
+            style="clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%)"
+          >
+            &rarr;
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- visi dan misi -->
+    <section class="grid grid-cols-12 bg-[#f8f4f4] p-[40px] mt-[50px]">
+      <div class="col-start-2 col-span-4">
+        <h1 class="text-3xl text-center font-bold text-[#781414]">Visi</h1>
+        <p class="text-justify mt-3">
+          Menjadi pemimpin dalam industri distribusi profil kusen UPVC dan
+          aluminium yang terpercaya dan berkelanjutan untuk memenuhi kebutuhan
+          pasar dengan standar kualitas tinggi di Indonesia.
+        </p>
+        <img
+          src="./assets/logo.png"
+          class="h-[100px] mx-auto mt-5"
+          alt="logo"
+        />
+      </div>
+      <div class="col-start-8 col-span-4">
+        <h1 class="text-3xl text-center font-bold text-[#781414]">Misi</h1>
+        <ul>
+          <li class="text-justify mt-5 text-sm">
+            Mengembangkan jaringan pasokan yang kuat dan berkelanjutan untuk
+            memastikan ketersediaan produk kusen UPVC dan aluminium yang luas
+            sehingga memenuhi berbagai kebutuhan proyek konstruksi di setiap
+            daerah.
+          </li>
+          <li class="text-justify mt-5 text-sm">
+            Membangun dan memelihara hubungan kemitraan yang saling
+            menguntungkan dengan produsen, kontraltor, dan pelanggan untuk
+            menciptakan nilai tambah yang berkelanjutan bagi semua pihak
+            terlibat.
+          </li>
+          <li class="text-justify mt-5 text-sm">
+            Fokus dalam pengembangan karyawan dengan menyediakan pelatihan, dan
+            kesempatan untuk pertumbuhan karir yang berkelanjutan dan membangun
+            tim yang kompeten dan berdedikasi.
+          </li>
+          <li class="text-justify mt-5 text-sm">
+            Berkomitmen untuk memberikan layanan prima kepada pelanggan untuk
+            memenuhi kebutuhan bahan bangunan dan harapan pelanggan.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid grid-cols-10 grid-rows-2 gap-4 p-[50px]">
+      <div class="col-start-3 col-span-2 relative">
+        <img
+          src="./assets/background kotak.jpg"
+          class="rounded-xl"
+          style="filter: brightness(0.4)"
+          alt="gambar"
+        />
+        <div
+          class="absolute text-white font-bold text-2xl z-10 top-0 bottom-0 flex items-center justify-center items-center"
+        >
+          <h1 class="text-center">Mengapa Harus di GBP?</h1>
+        </div>
+      </div>
+      <div class="col-start-5 col-span-2 bg-[#781414] rounded-lg">
+        <img
+          src="./assets/icon/Copy of Harga Kompetitif (White).png"
+          alt="harga"
+          class="w-[70px] h-[70px] mx-auto mt-[30px]"
+        />
+        <p class="text-white text-sm text-center mt-[20px]">
+          Dapatkan harga terbaik setiap produk berkualitas untuk mendukung
+          rencana Anda
+        </p>
+      </div>
+      <div class="col-start-7 col-span-2 bg-[#781414] rounded-lg">
+        <img
+          src="./assets/icon/Copy of Harga Kompetitif (White).png"
+          alt="harga"
+          class="w-[70px] h-[70px] mx-auto mt-[30px]"
+        />
+        <p class="text-white text-sm text-center mt-[20px]">
+          Dapatkan harga terbaik setiap produk berkualitas untuk mendukung
+          rencana Anda
+        </p>
+      </div>
+
+      <div class="col-start-3 col-span-2 bg-[#781414] rounded-lg">
+        <img
+          src="./assets/icon/Copy of Harga Kompetitif (White).png"
+          alt="harga"
+          class="w-[70px] h-[70px] mx-auto mt-[30px]"
+        />
+        <p class="text-white text-sm text-center mt-[20px]">
+          Dapatkan harga terbaik setiap produk berkualitas untuk mendukung
+          rencana Anda
+        </p>
+      </div>
+      <div class="col-start-5 col-span-2 bg-[#781414] rounded-lg">
+        <img
+          src="./assets/icon/Copy of Harga Kompetitif (White).png"
+          alt="harga"
+          class="w-[70px] h-[70px] mx-auto mt-[30px]"
+        />
+        <p class="text-white text-sm text-center mt-[20px]">
+          Dapatkan harga terbaik setiap produk berkualitas untuk mendukung
+          rencana Anda
+        </p>
+      </div>
+      <div class="col-start-7 col-span-2 bg-[#781414] rounded-lg">
+        <img
+          src="./assets/icon/Copy of Harga Kompetitif (White).png"
+          alt="harga"
+          class="w-[70px] h-[70px] mx-auto mt-[30px]"
+        />
+        <p class="text-white text-sm text-center mt-[20px]">
+          Dapatkan harga terbaik setiap produk berkualitas untuk mendukung
+          rencana Anda
+        </p>
+      </div>
+    </section>
+    <section class="relative">
+      <img
+        src="./assets/bg-slider-home-1.jpg"
+        class="w-full h-[1128px] object-cover"
+        alt="background"
+      />
+      <section
+        class="absolute top-0 w-full min-h-screen py-12 px-4 bg-red-900/90 sm:px-6 lg:px-8"
+      >
+        <div class="max-w-3xl mx-auto">
+          <h1 class="text-3xl font-bold text-white mb-8 text-center">
+            Perjalanan Kami Dalam Menghadirkan Produk untuk Proyek Anda
+          </h1>
+
+          <div class="relative">
+            <!-- Vertical line -->
+            <div
+              class="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-white"
+            ></div>
+
+            <!-- Timeline items -->
+            <div class="mb-8 flex justify-between items-center w-full">
+              <div class="w-5/12"></div>
+              <div class="w-5/12">
+                <div class="bg-white p-4 rounded shadow">
+                  <h3 class="font-bold text-lg mb-2">2010</h3>
+                  <p class="text-sm">
+                    Pada tahun 2010, perusahaan mengawali perjalanan bisnisnya
+                    dengan nama Metta Buana Sejahtera (MBS). Hanya butuh
+                    beberapa waktu sejak berdiri, Metta Buana Sejahtera menjadi
+                    distributor unggulan dengan produk distribusi profil kusen
+                    UPVC, mesin fabrikasi, besi hollow, aluminium dan aksesoris
+                    hardware untuk pintu & jendela
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="mb-8 flex justify-between items-center w-full right-timeline"
+            >
+              <div class="w-5/12">
+                <div class="bg-white p-4 rounded shadow">
+                  <h3 class="font-bold text-lg mb-2">2012</h3>
+                  <p class="text-sm">
+                    Hanya berselang 2 tahun, GBP melakukan ekspansi dengan
+                    membuka gudang cabang pertama di wilayah Pekanbaru untuk
+                    memperluas jangkauan distribusi di daerah Sumatera.
+                  </p>
+                  <button class="mt-2 bg-red-500 text-white px-3 py-1 rounded">
+                    Lihat di Peta
+                  </button>
+                </div>
+              </div>
+              <div class="w-5/12"></div>
+            </div>
+
+            <div
+              class="mb-8 flex justify-between items-center w-full left-timeline"
+            >
+              <div class="w-5/12"></div>
+              <div class="w-5/12">
+                <div class="bg-white p-4 rounded shadow">
+                  <h3 class="font-bold text-lg mb-2">2021</h3>
+                  <p class="text-sm">Pembukaan Titik Distribusi Semarang</p>
+                  <p class="text-sm">
+                    Untuk terus memperluas jaringan pelanggan, MBS membuka titik
+                    distribusi guna memperluas cakupan bisnis di wilayah Jawa
+                    tengah dan sekitarnya.
+                  </p>
+                  <button class="mt-2 bg-red-500 text-white px-3 py-1 rounded">
+                    Lihat di Peta
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="flex justify-between items-center w-full right-timeline"
+            >
+              <div class="w-5/12">
+                <div class="bg-white p-4 rounded shadow">
+                  <h3 class="font-bold text-lg mb-2">2023</h3>
+                  <p class="text-sm">Pembukaan Titik Distribusi</p>
+                  <p class="text-sm">
+                    Tidak sampai disitu, MBS terus memperluas sayap bisnisnya
+                    dengan membuka gudang di daerah Medan, Sumatera Utara.
+                  </p>
+                  <button class="mt-2 bg-red-500 text-white px-3 py-1 rounded">
+                    Lihat di Peta
+                  </button>
+                </div>
+              </div>
+              <div class="w-5/12"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="p-[50px] grid grid-cols-12">
+      <img
+        src="./assets/TB-Global-Group.png"
+        alt="logo"
+        class="object-contain col-start-4 col-span-2"
+      />
+      <div class="col-start-7 col-span-4">
+        <h1 class="text-4xl text-center text-[#781414] font-bold">
+          Tentang TB GLOBAL GROUP
+        </h1>
+        <p class="text-justify mt-[10px] text-sm">
+          PT Tribuana Global Grup (TB Global Group) merupakan perusahaan induk
+          yang dibentuk pada tahun 1998 melalui penggabungan antar lini bisnis
+          yang terdiri dari manufaktur dan distribusi bahan bangunan, truk &
+          peralatan berat, agribisnis, perdagangan dan jasa, serta properti &
+          konstruksi di Indonesia. TB Global Group terus melihat untuk
+          memanfaatkan peluang baru dan mendorong pertumbuhan dalam menghadapi
+          kodisi pasar yang dinamis di dunia masa depan. Saat ini, TB Global
+          Group telah berkembang dari perusahaan menjadi grup nasional yang
+          memiliki sekitar 5000 karyawan. PT Global Buana Perkasa adalah salah
+          satu dari banyaknya perusahaan didalam TB Global Group.
+        </p>
+      </div>
+    </section>
+
+    <section class="p-[50px]">
+      <h1 class="text-5xl font-bold text-[#781414] text-center">
+        Value Global Buana Perkasa
+      </h1>
+      <div class="grid grid-cols-8 p-[50px] gap-5">
+        <div
+          class="col-start-2 text-5xl flex items-center justify-between font-bold rounded-l-lg text-white col-span-2 p-5 rounded bg-[#781414]"
+        >
+          <span>P</span>
+          <span class="bg-[#f0242c] px-[12px] py-[8px] text-center rounded-full"
+            >O</span
+          >
+          <span>W</span>
+          <span>E</span>
+          <span>R</span>
+        </div>
+        <div
+          class="col-start-5 col-span-3 grid grid-cols-5 rounded-lg bg-[#781414]"
+        >
+          <div
+            class="col-span-1 text-5xl flex justify-center items-center font-bold rounded-l-lg text-white bg-[#f0242c]"
+          >
+            O
+          </div>
+          <div class="col-span-4 flex flex-col text-white p-5">
+            <h1 class="text-2xl font-bold">Optimism</h1>
+            <p class="text-[10px] text-justify mt-2">
+              Insan TB Global Group memiliki sikap optimis dalam mencapai
+              tujuan, berpikir terbuka dan proaktif memastikan kebutuhan &
+              harapan stakeholder terpenuhi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#f8f4f4] p-[30px]">
+      <h1 class="text-center text-3xl font-bold">Distributor Resmi</h1>
+      <div class="grid grid-cols-14 gap-5 p-[50px]">
+        <div class="col-start-2 col-span-2">
+          <img
+            src="./assets/distribusi-kerja-sama/gnet.png"
+            alt="logo"
+            class="object-contain h-[80px]"
+          />
+        </div>
+        <div class="col-start-4 col-span-2">
+          <img
+            src="./assets/distribusi-kerja-sama/geco.png"
+            alt="logo"
+            class="object-contain h-[80px]"
+          />
+        </div>
+        <div class="col-start-6 col-span-2">
+          <img
+            src="./assets/distribusi-kerja-sama/conch.png"
+            alt="logo"
+            class="object-contain h-[80px]"
+          />
+        </div>
+        <div class="col-start-8 col-span-2">
+          <img
+            src="./assets/distribusi-kerja-sama/assa.png"
+            alt="logo"
+            class="object-contain h-[80px]"
+          />
+        </div>
+        <div class="col-start-10 col-span-2">
+          <img
+            src="./assets/distribusi-kerja-sama/yale.png"
+            alt="logo"
+            class="object-contain h-[80px]"
+          />
+        </div>
+        <div class="col-start-12 col-span-2">
+          <img
+            src="./assets/distribusi-kerja-sama/roto.png"
+            alt="logo"
+            class="object-contain h-[80px]"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="p-[50px]">
+      <h1 class="text-4xl font-bold text-center">
+        Semua Produk Telah Teruji dan Terjamin Aman
+      </h1>
+      <p class="text-sm text-center">
+        Produk yang kamu distribusikan telah menjalani berbagai pengujian sesuai
+        standar industri, menjadikan mutu dan keamanan untuk digunakan dalam
+        proyek Anda.
+      </p>
+
+      <div class="grid grid-cols-12 mt-5">
+        <div class="col-start-3 col-span-4 grid grid-cols-2 gap-4 grid-rows-4">
+          <img
+            src="./assets/logo-pengujian/kemenperin.png"
+            alt="logo"
+            class="col-span-1 h-[100px] object-contain mx-auto w-[100px] col-start-1 row-start-1"
+          />
+          <img
+            src="./assets/logo-pengujian/sucofindo.png"
+            alt="logo"
+            class="col-span-1 h-[100px] object-contain mx-auto w-[100px] col-start-2 row-start-1"
+          />
+          <img
+            src="./assets/logo-pengujian/zsbc.png"
+            alt="logo"
+            class="col-span-1 h-[100px] object-contain mx-auto w-[100px] col-start-1 row-start-2"
+          />
+          <img
+            src="./assets/logo-pengujian/sgs.png"
+            alt="logo"
+            class="col-span-1 h-[100px] object-contain mx-auto w-[100px] col-start-2 row-start-2"
+          />
+          <img
+            src="./assets/logo-pengujian/ecm.png"
+            alt="logo"
+            class="col-span-1 h-[100px] object-contain mx-auto w-[100px] col-start-1 row-start-3"
+          />
+          <img
+            src="./assets/logo-pengujian/authorized.png"
+            alt="logo"
+            class="col-span-1 h-[100px] object-contain mx-auto w-[100px] col-start-2 row-start-3"
+          />
+          <img
+            src="./assets/logo-pengujian/iset.png"
+            alt="logo"
+            class="col-span-1 h-[100px] object-contain mx-auto w-[100px] col-start-1 row-start-4"
+          />
+          <img
+            src="./assets/logo-pengujian/cqc.png"
+            alt="logo"
+            class="col-span-1 h-[100px] object-contain mx-auto w-[100px] col-start-2 row-start-4"
+          />
+        </div>
+        <div class="col-start-7 col-span-4">
+          <img
+            src="./assets/sertifikat.png"
+            alt="sertifikat"
+            class="object-contain"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <!-- hiasan footer -->
+    <div class="relative mt-[50px] h-[40px]">
+      <div
+        class="h-[40px] w-[35%] bg-[#f0242c] absolute left-0 top-1"
+        style="clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%)"
+      ></div>
+      <div
+        class="h-[40px] w-[35%] bg-[#f0242c] absolute right-0 top-1"
+        style="clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%)"
+      ></div>
+    </div>
+    <footer class="bg-[#f0242c] py-[50px]">
+      <div class="grid grid-cols-8 gap-4 h-[250px]">
+        <span class="col-span-1"></span>
+        <div class="col-span-2 mt-[20px]">
+          <div>
+            <img
+              src="./assets/logo (white).png"
+              alt="logo"
+              class="h-[80px] object-contain"
+            />
+          </div>
+
+          <div class="text-white mt-[50px]">
+            <h2 class="font-bold">Main Warehouse</h2>
+            <p>
+              Komplek Pergudangan 99 Block BW, Jl. Raya Selembaran KM 4, Kosambi
+              - Dadap 15123
+            </p>
+          </div>
+        </div>
+        <span class="col-span-1"></span>
+        <div class="col-span-1 mt-[20px]">
+          <div>
+            <h2 class="text-white font-bold">Produk</h2>
+            <ul class="text-white">
+              <li><a href="#">Profil Kunsen UPVC</a></li>
+              <li><a href="#">Profil Alumunium</a></li>
+              <li><a href="#">Hardware Acc</a></li>
+              <li><a href="#">Besi Hollow</a></li>
+              <li><a href="#">Mesin Fabrikasi</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-span-1 mt-[20px]">
+          <div>
+            <h2 class="text-white font-bold">Informasi</h2>
+            <ul class="text-white">
+              <li><a href="#">Brands</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Tentang GBP</a></li>
+              <li><a href="#">Tentang TB Global Group</a></li>
+              <li><a href="#">Artikel</a></li>
+              <li><a href="#">Kebijakan Privasi</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-span-1 mt-[20px]">
+          <div>
+            <h2 class="text-white font-bold">Layanan</h2>
+            <ul class="text-white">
+              <li><a href="#">Hubungi Call Center</a></li>
+              <li><a href="#">Lokasi Gudang</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-span-1 relative">
+          <div
+            class="absolute h-[35px] bottom-0 text-[#f0242c] bg-white flex items-center w-full rounded-l-lg"
+          >
+            <span class="ml-[30px] font-bold">Part Of</span>
+
+            <img
+              src="./assets/TB-Global-Group.png"
+              class="h-[25px] object-contain inline ml-[10px]"
+              alt="logo"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 mt-[20px]">
+        <div
+          class="col-span-1 flex justify-end gap-[20px] bg-white pr-[100px] py-2"
+          style="clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%)"
+        >
+          <img
+            src="./assets/distribusi-kerja-sama/gnet.png"
+            class="h-[30px] object-contain"
+            alt="logo"
+          />
+          <img
+            src="./assets/distribusi-kerja-sama/geco.png"
+            class="h-[30px] object-contain"
+            alt="logo"
+          />
+          <img
+            src="./assets/distribusi-kerja-sama/conch.png"
+            class="h-[30px] object-contain"
+            alt="logo"
+          />
+          <img
+            src="./assets/distribusi-kerja-sama/assa.png"
+            class="h-[30px] object-contain"
+            alt="logo"
+          />
+          <img
+            src="./assets/distribusi-kerja-sama/yale.png"
+            class="h-[30px] object-contain"
+            alt="logo"
+          />
+          <img
+            src="./assets/distribusi-kerja-sama/roto.png"
+            class="h-[30px] object-contain"
+            alt="logo"
+          />
+        </div>
+        <div class="col-span-1 grid grid-cols-2">
+          <div class="text-white col-span-1 mr-[30px]">
+            <p class="text-end">@ 2024 Global Buana Perkasa</p>
+            <p class="text-end">All Rights Reserved</p>
+          </div>
+          <div class="col-span-1 text-white flex justify-start gap-[10px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-12 h-12"
+            >
+              <path
+                d="M19 0h-14c-2.75 0-5 2.25-5 5v14c0 2.75 2.25 5 5 5h14c2.75 0 5-2.25 5-5v-14c0-2.75-2.25-5-5-5zm-11 20h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.787-1.75-1.752 0-.966.784-1.752 1.75-1.752s1.75.786 1.75 1.752c0 .965-.784 1.752-1.75 1.752zm12.5 12.268h-3v-5.604c0-1.337-.025-3.061-1.865-3.061-1.865 0-2.151 1.459-2.151 2.963v5.702h-3v-11h2.884v1.505h.041c.403-.762 1.384-1.565 2.852-1.565 3.05 0 3.613 2.009 3.613 4.621v6.439z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-12 h-12"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.243 2.418.402a4.92 4.92 0 0 1 1.7 1.112 4.92 4.92 0 0 1 1.112 1.7c.16.448.348 1.248.402 2.418.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.243 1.97-.402 2.418a4.92 4.92 0 0 1-1.112 1.7 4.92 4.92 0 0 1-1.7 1.112c-.448.16-1.248.348-2.418.402-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.243-2.418-.402a4.92 4.92 0 0 1-1.7-1.112 4.92 4.92 0 0 1-1.112-1.7c-.16-.448-.348-1.248-.402-2.418-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.054-1.17.243-1.97.402-2.418a4.92 4.92 0 0 1 1.112-1.7 4.92 4.92 0 0 1 1.7-1.112c.448-.16 1.248-.348 2.418-.402 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.257 0-3.667.012-4.947.07-1.277.059-2.153.27-2.903.574a7.932 7.932 0 0 0-2.884 1.637 7.932 7.932 0 0 0-1.637 2.884c-.305.75-.515 1.626-.574 2.903-.058 1.28-.07 1.69-.07 4.947s.012 3.667.07 4.947c.059 1.277.27 2.153.574 2.903a7.932 7.932 0 0 0 1.637 2.884 7.932 7.932 0 0 0 2.884 1.637c.75.305 1.626.515 2.903.574 1.28.058 1.69.07 4.947.07s3.667-.012 4.947-.07c1.277-.059 2.153-.27 2.903-.574a7.932 7.932 0 0 0 2.884-1.637 7.932 7.932 0 0 0 1.637-2.884c.305-.75.515-1.626.574-2.903.058-1.28.07-1.69.07-4.947s-.012-3.667-.07-4.947c-.059-1.277-.27-2.153-.574-2.903a7.932 7.932 0 0 0-1.637-2.884 7.932 7.932 0 0 0-2.884-1.637c-.75-.305-1.626-.515-2.903-.574-1.28-.058-1.69-.07-4.947-.07zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.207 0-4-1.793-4-4s1.793-4 4-4 4 1.793 4 4-1.793 4-4 4zm6.406-11.845c-1.047 0-1.898-.851-1.898-1.898s.851-1.898 1.898-1.898 1.898.851 1.898 1.898-.851 1.898-1.898 1.898z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-12 h-12"
+            >
+              <path
+                d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.657-4.788 1.325 0 2.463.099 2.795.143v3.24h-1.918c-1.504 0-1.796.714-1.796 1.763v2.313h3.59l-.467 3.622h-3.123v9.294h6.127c.731 0 1.324-.593 1.324-1.324v-21.351c0-.732-.593-1.325-1.324-1.325z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/navbar.js"></script>
+  </body>
+</html>

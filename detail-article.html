@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav
+      class="bg-[#f0242c] h-[100px] relative text-white grid grid-cols-5 shadow-xl mb-[50px]"
+    >
+      <!-- logo -->
+      <div
+        class="bg-white h-full flex items-center justify-center col-span-3 md:col-span-1"
+        style="clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%)"
+      >
+        <a href="/index.html">
+          <img
+            src="./assets/logo.png"
+            alt="logo GBP"
+            class="h-[60px] md:h-[75px] mr-5"
+          />
+        </a>
+      </div>
+      <div class="col-span-2 flex items-center justify-end md:hidden pr-4">
+        <button id="menu-toggle" class="focus:outline-none">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <ul
+        class="absolute hidden md:hidden w-full z-10 transform transition-transform duration-300 ease-in-out top-full"
+        id="menu"
+      >
+        <li class="flex py-[5px] bg-[#f0242c] justify-center items-center">
+          <a href="/product.html">PRODUK</a>
+        </li>
+        <li class="flex py-[5px] bg-[#f0242c] justify-center items-center">
+          <a href="/gudang.html">GUDANG</a>
+        </li>
+        <li class="flex py-[5px] bg-[#f0242c] justify-center items-center">
+          <a href="/catalog.html">KATALOG</a>
+        </li>
+        <li class="flex py-[5px] bg-[#f0242c] justify-center items-center">
+          <a href="/about.html">TENTANG KAMI</a>
+        </li>
+        <li class="flex py-[5px] bg-[#f0242c] justify-center items-center">
+          <a href="/article.html">ARTIKEL</a>
+        </li>
+        <li class="flex py-[5px] bg-[#f0242c] justify-center items-center">
+          <div class="flex items-center justify-center">
+            <input
+              type="text"
+              placeholder="SEARCH"
+              class="px-4 py-1 rounded-l-full text-black"
+            />
+            <button class="bg-white text-red-600 p-2 rounded-r-full">
+              <svg
+                class="w-4 h-4"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.707 14.293l5.657 5.657-1.414 1.414-5.657-5.657a8.001 8.001 0 111.414-1.414zm-5.707 1.707a6 6 0 100-12 6 6 0 000 12z"
+                />
+              </svg>
+            </button>
+          </div>
+        </li>
+      </ul>
+      <!-- list item -->
+      <ul class="hidden md:flex items-center justify-around col-span-3">
+        <li><a href="/product.html">PRODUK</a></li>
+        <li><a href="/gudang.html">GUDANG</a></li>
+        <li><a href="/catalog.html">KATALOG</a></li>
+        <li><a href="/about.html">TENTANG KAMI</a></li>
+        <li><a href="/article.html">ARTIKEL</a></li>
+      </ul>
+
+      <!-- search bar -->
+      <div class="col-span-1 hidden md:flex items-center justify-center">
+        <input
+          type="text"
+          placeholder="SEARCH"
+          class="px-4 py-1 rounded-l-full text-black"
+        />
+        <button class="bg-white text-red-600 p-2 rounded-r-full">
+          <svg
+            class="w-4 h-4"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M15.707 14.293l5.657 5.657-1.414 1.414-5.657-5.657a8.001 8.001 0 111.414-1.414zm-5.707 1.707a6 6 0 100-12 6 6 0 000 12z"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <div class="container mx-auto my-8 p-[50px]">
+      <!-- Breadcrumbs -->
+      <nav class="text-sm mb-4">
+        <a href="#" class="text-red-600">Artikel</a> &gt;
+        <a href="#" class="text-red-600">Kategori</a> &gt;
+        <span class="text-gray-500">Judul</span>
+      </nav>
+
+      <!-- Main content -->
+      <div class="flex flex-col lg:flex-row">
+        <div class="lg:w-2/3 lg:pr-6">
+          <!-- Article Title -->
+          <h1 class="text-3xl font-bold mb-4">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+          </h1>
+
+          <!-- Article Meta -->
+          <div class="text-gray-600 text-sm flex items-center space-x-2 mb-6">
+            <span><i class="fas fa-calendar-alt"></i> 30 September 1965</span>
+            <span><i class="fas fa-user"></i> Stephen Caw</span>
+          </div>
+
+          <!-- Article Image -->
+          <img
+            src="https://via.placeholder.com/600x400"
+            alt="Article Image"
+            class="w-full h-auto mb-6"
+          />
+
+          <!-- Article Content -->
+          <p class="text-gray-800 mb-4">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem
+            ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+            nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpat.
+          </p>
+          <p class="text-gray-800 mb-4">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem
+            ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+            nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpat.
+          </p>
+
+          <!-- Article TOC (Table of Content) -->
+          <div class="bg-gray-100 p-4 rounded mb-6">
+            <h2 class="text-lg font-bold mb-2">Daftar Isi</h2>
+            <ul class="list-disc pl-6">
+              <li>Header 1</li>
+              <li>Header 2</li>
+              <li>Header 3</li>
+            </ul>
+          </div>
+
+          <!-- Subheadings and more content -->
+          <h2 class="text-xl font-bold mt-8 mb-4">Header 1</h2>
+          <p class="text-gray-800 mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
+            corporis eius eum ea mollitia ipsa, voluptatibus deleniti, assumenda
+            perferendis deserunt rem est voluptatem, veniam quibusdam ab. Amet
+            expedita corporis qui.
+          </p>
+
+          <h2 class="text-xl font-bold mt-8 mb-4">Header 2</h2>
+          <p class="text-gray-800 mb-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea saepe
+            vitae in, voluptas, culpa illo consectetur quisquam ad numquam
+            inventore maiores, eum consequuntur cupiditate aliquam tenetur
+            quibusdam dolore corporis ratione.
+          </p>
+
+          <!-- Pagination -->
+          <div class="flex justify-between items-center mt-8">
+            <a
+              href="#"
+              class="flex items-center text-white bg-red-600 px-4 py-2 rounded-lg"
+            >
+              <i class="fas fa-arrow-left mr-2"></i> Sebelumnya
+            </a>
+            <a
+              href="#"
+              class="flex items-center text-white bg-red-600 px-4 py-2 rounded-lg"
+            >
+              Selanjutnya <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:w-1/3 mt-8 lg:mt-0">
+          <!-- Related Posts -->
+          <div class="mb-8">
+            <h3 class="text-xl font-bold mb-4">Postingan Terkait</h3>
+            <ul class="space-y-4">
+              <li>
+                <a href="#" class="text-red-600">Lorem ipsum dolor sit amet</a>
+                <div class="text-gray-600 text-sm">30 September 1965</div>
+              </li>
+              <li>
+                <a href="#" class="text-red-600">Lorem ipsum dolor sit amet</a>
+                <div class="text-gray-600 text-sm">30 September 1965</div>
+              </li>
+              <li>
+                <a href="#" class="text-red-600">Lorem ipsum dolor sit amet</a>
+                <div class="text-gray-600 text-sm">30 September 1965</div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Categories -->
+          <div class="mb-8">
+            <h3 class="text-xl font-bold mb-4">Kategori</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="flex justify-between items-center text-gray-800 hover:text-red-600"
+                >
+                  <span>Lorem Ipsum</span>
+                  <i class="fas fa-chevron-right"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex justify-between items-center text-gray-800 hover:text-red-600"
+                >
+                  <span>Lorem Ipsum</span>
+                  <i class="fas fa-chevron-right"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex justify-between items-center text-red-600"
+                >
+                  <span>Lorem Ipsum</span>
+                  <i class="fas fa-chevron-right"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="p-4 bg-red-600 text-white rounded-lg">
+            <h3 class="text-lg font-bold mb-4">Have Any Question?</h3>
+            <p class="text-sm mb-4">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Lorem
+              ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+              erat volutpat.
+            </p>
+            <div class="text-sm">
+              <p><i class="fas fa-phone"></i> +62 4200 6660 1304</p>
+              <p><i class="fas fa-envelope"></i> gbp.marketing@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <!-- hiasan footer -->
+    <div class="relative mt-[50px] h-[40px]">
+      <div
+        class="h-[40px] w-[35%] bg-[#f0242c] absolute left-0 top-1"
+        style="clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%)"
+      ></div>
+      <div
+        class="h-[40px] w-[35%] bg-[#f0242c] absolute right-0 top-1"
+        style="clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%)"
+      ></div>
+    </div>
+    <footer class="bg-[#f0242c] py-[50px]">
+      <div class="grid grid-cols-8 gap-4 h-[250px]">
+        <span class="col-span-1"></span>
+        <div class="col-span-2 mt-[20px]">
+          <div>
+            <img
+              src="./assets/logo (white).png"
+              alt="logo"
+              class="h-[80px] object-contain"
+            />
+          </div>
+
+          <div class="text-white mt-[50px]">
+            <h2 class="font-bold">Main Warehouse</h2>
+            <p>
+              Komplek Pergudangan 99 Block BW, Jl. Raya Selembaran KM 4, Kosambi
+              - Dadap 15123
+            </p>
+          </div>
+        </div>
+        <span class="col-span-1"></span>
+        <div class="col-span-1 mt-[20px]">
+          <div>
+            <h2 class="text-white font-bold">Produk</h2>
+            <ul class="text-white">
+              <li><a href="#">Profil Kunsen UPVC</a></li>
+              <li><a href="#">Profil Alumunium</a></li>
+              <li><a href="#">Hardware Acc</a></li>
+              <li><a href="#">Besi Hollow</a></li>
+              <li><a href="#">Mesin Fabrikasi</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-span-1 mt-[20px]">
+          <div>
+            <h2 class="text-white font-bold">Informasi</h2>
+            <ul class="text-white">
+              <li><a href="#">Brands</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Tentang GBP</a></li>
+              <li><a href="#">Tentang TB Global Group</a></li>
+              <li><a href="#">Artikel</a></li>
+              <li><a href="#">Kebijakan Privasi</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-span-1 mt-[20px]">
+          <div>
+            <h2 class="text-white font-bold">Layanan</h2>
+            <ul class="text-white">
+              <li><a href="#">Hubungi Call Center</a></li>
+              <li><a href="#">Lokasi Gudang</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-span-1 relative">
+          <div
+            class="absolute h-[35px] bottom-0 text-[#f0242c] bg-white flex items-center w-full rounded-l-lg"
+          >
+            <span class="ml-[30px] font-bold">Part Of</span>
+
+            <img
+              src="./assets/TB-Global-Group.png"
+              class="h-[25px] object-contain inline ml-[10px]"
+              alt="logo"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-2 mt-[20px]">
+        <div
+          class="col-span-1 flex justify-end gap-[20px] bg-white pr-[100px] py-2"
+          style="clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%)"
+        >
+          <img
+            src="./assets/distribusi-kerja-sama/gnet.png"
+            class="h-[30px] object-contain"
+            alt="logo"
+          />
+          <img
+            src="./assets/distribusi-kerja-sama/geco.png"
+            class="h-[30px] object-contain"
+            alt="logo"
+          />
+          <img
+            src="./assets/distribusi-kerja-sama/conch.png"
+            class="h-[30px] object-contain"
+            alt="logo"
+          />
+          <img
+            src="./assets/distribusi-kerja-sama/assa.png"
+            class="h-[30px] object-contain"
+            alt="logo"
+          />
+          <img
+            src="./assets/distribusi-kerja-sama/yale.png"
+            class="h-[30px] object-contain"
+            alt="logo"
+          />
+          <img
+            src="./assets/distribusi-kerja-sama/roto.png"
+            class="h-[30px] object-contain"
+            alt="logo"
+          />
+        </div>
+        <div class="col-span-1 grid grid-cols-2">
+          <div class="text-white col-span-1 mr-[30px]">
+            <p class="text-end">@ 2024 Global Buana Perkasa</p>
+            <p class="text-end">All Rights Reserved</p>
+          </div>
+          <div class="col-span-1 text-white flex justify-start gap-[10px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-12 h-12"
+            >
+              <path
+                d="M19 0h-14c-2.75 0-5 2.25-5 5v14c0 2.75 2.25 5 5 5h14c2.75 0 5-2.25 5-5v-14c0-2.75-2.25-5-5-5zm-11 20h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.787-1.75-1.752 0-.966.784-1.752 1.75-1.752s1.75.786 1.75 1.752c0 .965-.784 1.752-1.75 1.752zm12.5 12.268h-3v-5.604c0-1.337-.025-3.061-1.865-3.061-1.865 0-2.151 1.459-2.151 2.963v5.702h-3v-11h2.884v1.505h.041c.403-.762 1.384-1.565 2.852-1.565 3.05 0 3.613 2.009 3.613 4.621v6.439z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-12 h-12"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.243 2.418.402a4.92 4.92 0 0 1 1.7 1.112 4.92 4.92 0 0 1 1.112 1.7c.16.448.348 1.248.402 2.418.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.054 1.17-.243 1.97-.402 2.418a4.92 4.92 0 0 1-1.112 1.7 4.92 4.92 0 0 1-1.7 1.112c-.448.16-1.248.348-2.418.402-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.054-1.97-.243-2.418-.402a4.92 4.92 0 0 1-1.7-1.112 4.92 4.92 0 0 1-1.112-1.7c-.16-.448-.348-1.248-.402-2.418-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.054-1.17.243-1.97.402-2.418a4.92 4.92 0 0 1 1.112-1.7 4.92 4.92 0 0 1 1.7-1.112c.448-.16 1.248-.348 2.418-.402 1.266-.058 1.646-.07 4.85-.07zm0-2.163c-3.257 0-3.667.012-4.947.07-1.277.059-2.153.27-2.903.574a7.932 7.932 0 0 0-2.884 1.637 7.932 7.932 0 0 0-1.637 2.884c-.305.75-.515 1.626-.574 2.903-.058 1.28-.07 1.69-.07 4.947s.012 3.667.07 4.947c.059 1.277.27 2.153.574 2.903a7.932 7.932 0 0 0 1.637 2.884 7.932 7.932 0 0 0 2.884 1.637c.75.305 1.626.515 2.903.574 1.28.058 1.69.07 4.947.07s3.667-.012 4.947-.07c1.277-.059 2.153-.27 2.903-.574a7.932 7.932 0 0 0 2.884-1.637 7.932 7.932 0 0 0 1.637-2.884c.305-.75.515-1.626.574-2.903.058-1.28.07-1.69.07-4.947s-.012-3.667-.07-4.947c-.059-1.277-.27-2.153-.574-2.903a7.932 7.932 0 0 0-1.637-2.884 7.932 7.932 0 0 0-2.884-1.637c-.75-.305-1.626-.515-2.903-.574-1.28-.058-1.69-.07-4.947-.07zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.207 0-4-1.793-4-4s1.793-4 4-4 4 1.793 4 4-1.793 4-4 4zm6.406-11.845c-1.047 0-1.898-.851-1.898-1.898s.851-1.898 1.898-1.898 1.898.851 1.898 1.898-.851 1.898-1.898 1.898z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-12 h-12"
+            >
+              <path
+                d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.657-4.788 1.325 0 2.463.099 2.795.143v3.24h-1.918c-1.504 0-1.796.714-1.796 1.763v2.313h3.59l-.467 3.622h-3.123v9.294h6.127c.731 0 1.324-.593 1.324-1.324v-21.351c0-.732-.593-1.325-1.324-1.325z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/navbar.js"></script>
+  </body>
+</html>
